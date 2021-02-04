@@ -1,19 +1,33 @@
 {
 	"name": "biz-days",
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.ts",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
+	"description": "A util package to calculate working/business days between two dates",
+	"main": "./dist/index.js",
+	"author": "Darcy Price <darcyelsing@gmail.com> (https://darcydev.com)",
+	"license": "MIT",
+	"keywords": [
+		"react",
+		"dates",
+		"working days",
+		"business days"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/darcydev/biz-days.git"
 	},
-	"author": "Darcy Price",
-	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/darcydev/biz-days/issues"
 	},
-	"homepage": "https://github.com/darcydev/biz-days#readme"
+	"homepage": "https://github.com/darcydev/biz-days#readme",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "npx babel src --out-dir dist",
+		"start": "npx babel src --watch --out-dir dist"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.12.13",
+		"@babel/core": "^7.12.13",
+		"@babel/preset-env": "^7.12.13",
+		"babel-preset-react": "^6.24.1"
+	}
 }
