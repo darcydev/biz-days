@@ -1,1 +1,3 @@
-export const calculateBizDays = () => true;
+import { calculateWorkingDays } from './src/calculateWorkingDays';
+
+export { calculateWorkingDays };
