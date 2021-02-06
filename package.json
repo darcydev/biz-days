@@ -1,6 +1,6 @@
 {
 	"name": "biz-days",
-	"version": "1.0.1",
+	"version": "0.0.1",
 	"description": "A util package to calculate working/business days between two dates",
 	"main": "./dist/index.js",
 	"author": "Darcy Price <darcyelsing@gmail.com> (https://darcydev.com)",
