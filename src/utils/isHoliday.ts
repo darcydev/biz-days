@@ -1,6 +1,6 @@
 import { isWeekend } from './isWeekend';
 
-export const isHoliday = (holidays, date) => {
+export const isHoliday = (holidays: Date[], date: Date): boolean => {
 	if (isWeekend(date)) {
 		return true;
 	}

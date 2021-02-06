@@ -1,6 +1,6 @@
 import { isWeekend } from '../utils/isWeekend';
 
-const getNextMon = (date) => {
+const getNextMon = (date: Date): Date => {
 	// create a copy of the date object
 	const subDate = new Date(+date);
 
@@ -9,7 +9,7 @@ const getNextMon = (date) => {
 	return subDate;
 };
 
-const getNextTue = (date) => {
+const getNextTue = (date: Date): Date => {
 	// create a copy of the date object
 	const subDate = new Date(+date);
 
@@ -18,7 +18,7 @@ const getNextTue = (date) => {
 	return subDate;
 };
 
-const getApplicableDates = (date) => {
+const getApplicableDates = (date: Date): Date[] => {
 	let dates = [date];
 	const weekend = isWeekend(date);
 
@@ -31,22 +31,22 @@ const getApplicableDates = (date) => {
 	return dates;
 };
 
-export const getNewYears = (year) => {
+export const getNewYears = (year: number): Date[] => {
 	const date = new Date(`${year}-01-01T00:00:00`);
 	return getApplicableDates(date);
 };
 
-export const getAusDay = (year) => {
+export const getAusDay = (year: number): Date[] => {
 	const date = new Date(`${year}-01-26T00:00:00`);
 	return getApplicableDates(date);
 };
 
-export const getChristmas = (year) => {
+export const getChristmas = (year: number): Date[] => {
 	const date = new Date(`${year}-12-25T00:00:00`);
 	return getApplicableDates(date);
 };
 
-export const getBoxingDay = (year) => {
+export const getBoxingDay = (year: number): Date[] => {
 	const date = new Date(`${year}-12-26T00:00:00`);
 
 	// If Christmas Day is either Sat or Sun, then Boxing Day's
